@@ -23,7 +23,13 @@ Before the course begins on Monday 8/31, I'd like you to prepare by doing a few 
 
 ## Installing Bash/SSH
 
-For Linux and Mac: Bash and SSH are already there. Simply open Terminal to start a Bash shell. 
+For Linux and MacOS before Catalina: Bash and SSH are already there. Simply open Terminal to start a Bash shell. 
+
+If you are running Catalina or newer on a Mac: Bash is no longer the default shell (Zsh is now the default). For setting Bash to the default shell, open the terminal and enter the following command: 
+
+        chsh -s /bin/bash
+
+Exit the terminal and reopen it. You should be running bash instead of Zsh. 
 
 For Windows: things are a bit more complicated. If you are running Windows 10, here are some good instructions for setting up Linux and Bash shell: https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/ 
 
