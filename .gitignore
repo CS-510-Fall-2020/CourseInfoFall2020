@@ -3,3 +3,9 @@
 *.out
 *synctex.gz
 *~
+*.png
+*.tiff
+*.tif
+*.jpg
+*.key
+*DS_Store
