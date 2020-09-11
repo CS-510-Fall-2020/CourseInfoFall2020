@@ -9,3 +9,16 @@
 *.jpg
 *.key
 *DS_Store
+Syllabus.tex
+Schedule.tex
+LectureNotes/01-Intro/01-Intro.pdf
+LectureNotes/01-Intro/01-Intro.tex
+LectureNotes/01-Intro/Rlogo.svg
+LectureNotes/02-LinuxBash/02-LinuxBash.pdf
+LectureNotes/02-LinuxBash/02-LinuxBash.tex
+LectureNotes/02-LinuxBash/Bash-Guide.tex
+LectureNotes/02-LinuxBash/logo-nano.jpeg
+LectureNotes/03-git/03-git.pdf
+LectureNotes/03-git/03-git.tex
+LectureNotes/03-git/poll1.csv
+LectureNotes/03-git/poll1.numbers
