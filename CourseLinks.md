@@ -19,4 +19,6 @@ This is a list of every link suggested as a resource for learning content online
 
 ## Learning R
 
-* YaRrr! A Pirate's Guide to R: https://bookdown.org/ndphillips/YaRrr/r-resources.html
+* YaRrr! A Pirate's Guide to R: https://bookdown.org/ndphillips/YaRrr/
+* R for Data Science: https://r4ds.had.co.nz/
+* R Graphics Cookbook: http://users.metu.edu.tr/ozancan/R%20Graphics%20Cookbook.pdf
