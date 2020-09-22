@@ -14,3 +14,6 @@ https://chapman.zoom.us/rec/share/Jmvr_driRstpiHyttNMjD-T03HCE4DOsLh-L0O_pNWqPnz
 
 * 05 - Bash scripting 1\
 https://chapman.zoom.us/rec/share/J-EzBN8wfg3czjXBuE2nMVem3SXRw0ptYnOuviVbYGGagpx0oUpnlWWqiF0pYOTT.M_tlHo6Xqox-Uxo0
+
+* 06 - Bash scripting 2\
+https://chapman.zoom.us/rec/share/c8Nwu5QtlbMoOYgbyBKxNNPzPuo8TEzlfB-W9BK4Apn2FYhPk0BkC_Kjp8lMlUOw.EvcjFlNOkS-guzwP
