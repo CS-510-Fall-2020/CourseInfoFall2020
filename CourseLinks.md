@@ -11,6 +11,7 @@ This is a list of every link suggested as a resource for learning content online
 * The difference between login and nonlogin shells: http://howtolamp.com/articles/difference-between-login-and-non-login-shell/
 * Bash Programming Tutorial: https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 * Parameter expansion: http://wiki.bash-hackers.org/syntax/pe
+* How to Script Error Free Bash if statements: https://www.shell-tips.com/bash/if-statement/
 
 ## Learning git
 
@@ -22,3 +23,5 @@ This is a list of every link suggested as a resource for learning content online
 * YaRrr! A Pirate's Guide to R: https://bookdown.org/ndphillips/YaRrr/
 * R for Data Science: https://r4ds.had.co.nz/
 * R Graphics Cookbook: http://users.metu.edu.tr/ozancan/R%20Graphics%20Cookbook.pdf
+* Advanced R: https://adv-r.hadley.nz/
+* Style guide (in Advanced R): http://adv-r.had.co.nz/Style.html
