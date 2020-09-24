@@ -25,3 +25,4 @@ This is a list of every link suggested as a resource for learning content online
 * R Graphics Cookbook: http://users.metu.edu.tr/ozancan/R%20Graphics%20Cookbook.pdf
 * Advanced R: https://adv-r.hadley.nz/
 * Style guide (in Advanced R): http://adv-r.had.co.nz/Style.html
+* R for Matlab Users: http://mathesaurus.sourceforge.net/octave-r.html

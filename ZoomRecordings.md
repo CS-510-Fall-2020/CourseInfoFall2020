@@ -17,3 +17,6 @@ https://chapman.zoom.us/rec/share/J-EzBN8wfg3czjXBuE2nMVem3SXRw0ptYnOuviVbYGGagp
 
 * 06 - Bash scripting 2\
 https://chapman.zoom.us/rec/share/c8Nwu5QtlbMoOYgbyBKxNNPzPuo8TEzlfB-W9BK4Apn2FYhPk0BkC_Kjp8lMlUOw.EvcjFlNOkS-guzwP
+
+* 07 - R Refresher \
+https://chapman.zoom.us/rec/share/H8lLS0Evgqqy9ome4yiC25n1xuGCUvRBAWVLK1HF5MpQt1lsahClxW9ppfj90ZIK.3kgBSd0Y8MnAg7vp
