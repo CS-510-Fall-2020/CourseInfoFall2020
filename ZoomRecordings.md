@@ -20,3 +20,6 @@ https://chapman.zoom.us/rec/share/c8Nwu5QtlbMoOYgbyBKxNNPzPuo8TEzlfB-W9BK4Apn2FY
 
 * 07 - R Refresher \
 https://chapman.zoom.us/rec/share/H8lLS0Evgqqy9ome4yiC25n1xuGCUvRBAWVLK1HF5MpQt1lsahClxW9ppfj90ZIK.3kgBSd0Y8MnAg7vp
+
+* 08 - R Tools 1 \
+https://chapman.zoom.us/rec/share/4pG6pMNRTdGZGybrhhQxG2UppccfWhWVhEbng7Em0kyWoLzd2nq31kNXcL_qYWIb.8IRnEGqkzk-rA98y
