@@ -9,6 +9,7 @@
 *.jpg
 *.key
 *DS_Store
+*.Rhistory
 Syllabus.tex
 Schedule.tex
 LectureNotes/01-Intro/01-Intro.pdf
@@ -26,3 +27,32 @@ LectureNotes/04-AdvBash/04-AdvBash.pdf
 LectureNotes/04-AdvBash/04-AdvBash.tex
 LectureNotes/04-AdvBash/NW1.csv
 LectureNotes/04-AdvBash/allpara.txt
+LectureNotes/05-ShellProgram1/05-ShellProgram.pdf
+LectureNotes/05-ShellProgram1/05-ShellProgram.tex
+LectureNotes/06-ShellProgram2/06-ShellProgram2.pdf
+*/06-ShellProgram2/06-ShellProgram2.tex
+*/07-Refresher/07-Refresher.pdf
+*/07-Refresher/07-Refresher.tex
+*/08-ToolsinR/Forcats.pdf
+*/08-ToolsinR/Forcats.pptx
+*/08-ToolsinR/GGPlot2slides_TristanTran.pdf
+*/08-ToolsinR/R Signal Processing Package.pdf
+*/08-ToolsinR/Random Package.pdf
+*/08-ToolsinR/SQLDF_Guannan Liu.pdf
+*/08-ToolsinR/SQLDF_Guannan Liu.pptx
+*/08-ToolsinR/TSA Package in R-1.pdf
+*/08-ToolsinR/TSA Package in R-1.pptx
+*/08-ToolsinR/dplyr package.pdf
+*/08-ToolsinR/dplyr package.pptx
+*/09-MoreRTools/Math 510 presentation.pdf
+*/09-MoreRTools/Math 510 presentation.pptx
+*/09-MoreRTools/Modelr package.pdf
+*/09-MoreRTools/MonteCarlo.pdf
+*/09-MoreRTools/PresentationCS510_MatlabPackage_R-master.zip
+*/09-MoreRTools/R Markdown.pdf
+*/09-MoreRTools/R Markdown.pptx
+*/09-MoreRTools/R_Presentation.pdf
+*/09-MoreRTools/R_Presentation.pptx
+*/09-MoreRTools/data.table.pptx
+*/09-MoreRTools/m2.csv
+.Rproj.user

@@ -23,3 +23,6 @@ https://chapman.zoom.us/rec/share/H8lLS0Evgqqy9ome4yiC25n1xuGCUvRBAWVLK1HF5MpQt1
 
 * 08 - R Tools 1 \
 https://chapman.zoom.us/rec/share/4pG6pMNRTdGZGybrhhQxG2UppccfWhWVhEbng7Em0kyWoLzd2nq31kNXcL_qYWIb.8IRnEGqkzk-rA98y
+
+* 09 – R Tools 2 \ 
+https://chapman.zoom.us/rec/share/JmTqrT9czMkBCPQQ6MWt11pGWILBLUBKes2bad-UzDNYm2is--UWVilgo3B1Y5fB.MNR2k4rCsh2pc-YF 
