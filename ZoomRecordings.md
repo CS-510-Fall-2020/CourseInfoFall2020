@@ -26,3 +26,6 @@ https://chapman.zoom.us/rec/share/4pG6pMNRTdGZGybrhhQxG2UppccfWhWVhEbng7Em0kyWoL
 
 * 09 – R Tools 2 \ 
 https://chapman.zoom.us/rec/share/JmTqrT9czMkBCPQQ6MWt11pGWILBLUBKes2bad-UzDNYm2is--UWVilgo3B1Y5fB.MNR2k4rCsh2pc-YF 
+
+* 10 – Best Practices Discussion \
+https://chapman.zoom.us/rec/share/mNb-x-6Aygnf3xJXOel1tHw1FLEKxi0DjPMVSIZez_x5FM1rL-ckYH1K0aD7Z1wf.c1RWXV9siMrQuKu3 
