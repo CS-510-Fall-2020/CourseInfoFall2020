@@ -4,11 +4,11 @@ context("testing sample")
 source("../functions.R")
 
 library(testthat)
-addtwo <- function(x) x+2
+#addtwo <- function(x) x+2
 
 
 test_that("integer", {
-  expect_equal(addtwo(-1),1)
+  expect_equal(addtwo(-1),4)
   expect_equal(addtwo(10),12)
 })
 

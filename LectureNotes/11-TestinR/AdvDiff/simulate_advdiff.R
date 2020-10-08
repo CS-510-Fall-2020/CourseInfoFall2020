@@ -15,7 +15,7 @@ start.x <- 5.6
 start.y <- -0.97
 
 # Creates points to follow
-num.dots <- 100
+num.dots <- 10000
 dotsx <- rep(start.x,num.dots)
 dotsy <- rep(start.y,num.dots)
 dots.start <- matrix(c(dotsx,dotsy),num.dots,2)
