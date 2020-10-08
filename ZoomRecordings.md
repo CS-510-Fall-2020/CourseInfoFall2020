@@ -29,3 +29,6 @@ https://chapman.zoom.us/rec/share/JmTqrT9czMkBCPQQ6MWt11pGWILBLUBKes2bad-UzDNYm2
 
 * 10 – Best Practices Discussion \
 https://chapman.zoom.us/rec/share/mNb-x-6Aygnf3xJXOel1tHw1FLEKxi0DjPMVSIZez_x5FM1rL-ckYH1K0aD7Z1wf.c1RWXV9siMrQuKu3 
+
+* 11 - Testing in R \
+https://chapman.zoom.us/rec/share/QEyH3dKbv_HF32_tK9cserJRaRlJma9eLlw_0PmVCHLKeHLg6zWw_djNqDEcmS0_.mFpqNXfns9zksjIS 
