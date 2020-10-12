@@ -16,11 +16,11 @@ post.hairs.vertex<-read.table("hairs1.vertex",skip=1)
 test_that("number of points", {
   expect_equal(pre.hairs.header$V1,post.hairs.header$V1)
   expect_equal(nrow(pre.hairs.vertex),nrow(post.hairs.vertex))
-  expect_equal(pre.hairs.csv[1,1],post.hairs.csv[1,1])
-  expect_equal(pre.hairs.csv[1,2],post.hairs.csv[1,2])
+  expect_equal(pre.hairs.csv[1,1],post.hairs.csv[1,1],tolerance=1e-5)
+  expect_equal(pre.hairs.csv[1,2],post.hairs.csv[1,2],tolerance=1e-5)
 })
 
 test_that("positions of hairs",{
-  expect_equal(pre.hairs.vertex[1,],post.hairs.vertex[1,])
-  expect_equal(pre.hairs.vertex,post.hairs.vertex)
+  expect_equal(pre.hairs.vertex[1,],post.hairs.vertex[1,],tolerance=1e-5)
+  expect_equal(pre.hairs.vertex,post.hairs.vertex,tolerance=1e-5)
 })
