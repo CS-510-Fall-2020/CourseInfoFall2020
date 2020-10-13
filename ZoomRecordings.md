@@ -32,3 +32,6 @@ https://chapman.zoom.us/rec/share/mNb-x-6Aygnf3xJXOel1tHw1FLEKxi0DjPMVSIZez_x5FM
 
 * 11 - Testing in R \
 https://chapman.zoom.us/rec/share/QEyH3dKbv_HF32_tK9cserJRaRlJma9eLlw_0PmVCHLKeHLg6zWw_djNqDEcmS0_.mFpqNXfns9zksjIS 
+
+* 12 - Refactoring \
+https://chapman.zoom.us/rec/share/hwTJVEseiPhvf9SnF3OeLjJ0G4lRhdjquHZuERRJQfcpvLnNJHbSOVjYyFcNadyQ.9VtU55xI8iz3HhYt 
