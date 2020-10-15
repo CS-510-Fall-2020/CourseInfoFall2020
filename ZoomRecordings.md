@@ -35,3 +35,6 @@ https://chapman.zoom.us/rec/share/QEyH3dKbv_HF32_tK9cserJRaRlJma9eLlw_0PmVCHLKeH
 
 * 12 - Refactoring \
 https://chapman.zoom.us/rec/share/hwTJVEseiPhvf9SnF3OeLjJ0G4lRhdjquHZuERRJQfcpvLnNJHbSOVjYyFcNadyQ.9VtU55xI8iz3HhYt 
+
+* 13 - Profiling and Optimization in R \
+https://chapman.zoom.us/rec/share/bJSwvpV_hJGULutAann2dSYMWQ8f6Bppc0Sk2KvWyR85hkpTp8GIN-KGcUKtdM4Z.E2_5clKZ6rZE8Jk_ 
