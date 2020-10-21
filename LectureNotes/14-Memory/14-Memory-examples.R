@@ -101,4 +101,18 @@ for (i in 1:length(g)){
   print(object_size(alphabet))
 }
 
+x<-data.frame(matrix(runif(100*1e4),ncol=100))
+medians<-vapply(x,median,numeric(1))
+for(i in seq_along(medians)){
+  x[,i]<-x[,i]-medians[i]
+  print(c(address(x),object_size(x)))
+}
+
+y<-as.list(x)
+for (i in 1:5){
+  y[[i]]<-y[[i]]-medians[i]
+  print(c(address(y),object_size(y)))
+}
+  
+  
 

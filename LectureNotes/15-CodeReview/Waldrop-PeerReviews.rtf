@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww25060\viewh11620\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf0 \expnd0\expndtw0\kerning0
+Referee(s)' Comments to Author:\
+\'a0\'a0\'a0 Referee: 1\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Comments to the Author\
+This manuscript presents an analysis of peristaltic pumping of valveless, tubular hearts. The authors use computational fluid dynamics (more specifically, the Immersed Boundary Method) to analyze flow speed, pressure, and cost of transport in a racetrack shaped system with an elastic moving boundary. The authors quantify competing factors in biodiversity using uncertainty quantification through generalized Polynomial Chaos expansions and Sobol indices. To the best of my knowledge, this is a rather new way of looking at biodiversity and I recommend this manuscript for publication after some revisions.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 First of all, why do the authors compare two different peristaltic motions? There seems to be no explanation for the choice of the prescribed kinematics. Do animals use one over the other? What is the significance of these choices? It might be helpful to show plots of the opposing sine-wave vs opposing Gaussian-peak model (pinch model) to give the readers a better idea of what is being analyzed.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Please make a separate schematic that shows the grid. This is a good place to also show directionality of gravity and identify R_top,bot. I realize that these figures might already be in other papers produced by this group, but for the sake of convenience for the readers, I suggest including this again.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Is there a comparison of gPC with Monte Carlo for a single case? Or a reference that compares the two? Further discussion of this would be worthwhile, as the entire paper is dependent on the reliability and speed of gPC. It may be worth placing this in the supplemental materials, but I will leave this to the authors\'92 discretion.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Lastly, I believe that the readers would benefit from 2D plots of Figure 3, Figure 4, and Figure 5 as a clearer reference base. While the Sobol indices seem to provide useful quantitative information on the importance of the input variables, I find it difficult to get a physical feel for how this works. By showing 2D plots, the readers may compare the quantitative Sobol indices with more a more qualitative and intuitive baseline correlations in the 2D plots.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Specific comments:\
+\'a0\'a0\'a0 L38 \'96 \'93walls. Such contractions reduce \'85\'94\
+\'a0\'a0\'a0 L73 \'96 \'93trade offs\'94 to \'93trade-offs\'94\
+\'a0\'a0\'a0 L75 \'96 Please explicitly define what is peristalsis. It is sort of implied in the first paragraph of this section, but it helps to be explicit.\
+\'a0\'a0\'a0 L119 \'96 the wording here is weird. Please define geometric morphometrics in a separate sentence.\
+\'a0\'a0\'a0 L197 \'96 Please provide a reference to Table 1 here.\
+\'a0\'a0\'a0 L216 \'96 Consider using another variable for mu (position of pinch on x-axis). Mu is by convention fluid viscosity, and also already defined as fluid viscosity in equation 1.\
+\'a0\'a0\'a0 L216 \'96 Somewhere here, please define \'93opposing Gaussian-peak peristalsis model\'94 as the pinch model, since it is referred to as pinch model throughout the manuscript.\
+\'a0\'a0\'a0 L224 \'96 Do the authors mean spatially averaged along the highlighted regions from wall to wall in Figure 1A? Please make more clear.\
+\'a0\'a0\'a0 L245 \'96 Fix the hyperlinks, some of them do not work properly when clicked on. Additionally, the analyzed data for the opposing sine wave model and the opposing Gaussian peak model are broken links.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Table 1 \'96 Please provide units, or clarify that all variables are dimensionless.\
+\'a0\'a0\'a0 Figure 1 \'96 Please make the outline of the tube more visible against the dark blue. Perhaps a light grey color? Include a label for the colorbars. Please use arrows to show direction of wave motion. Black dots are not clear.\
+\'a0\'a0\'a0 Figure 3 \'96 Label colorbar.\
+\'a0\'a0\'a0 Figure 4 \'96 please add a color scale for these plots.\
+\'a0\'a0\'a0 Figure 5 \'96 please add a color scale to these plots.\
+\'a0\'a0\'a0 References need to be edited. Some species names are not correctly capitalized according to standard nomenclature (14, for example). Reference 22 and 24 are repeated as 50 and 48, respectively. Typos in titles of ref 24, 25, 39, 43. Missing capitalizations in some references, like for Monte Carlo in ref 41.\
+\
+\
+\'a0\'a0\'a0 Referee: 2\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Comments to the Author\
+\'a0\'a0\'a0 Comments to Authors\
+\'a0\'a0\'a0 Introduction\
+\'a0\'a0\'a0 The 4 sections of the Introduction look as cut-and-paste pieces from a thesis without direct connection to the manuscript title. It contains several repetitions. Moreover, why is it important to criticize previous models and studies not relevant to the manuscript topic? Why expand on organ development when you study valveless flow? A coherent short Introduction without sub-titles that focused on the topic of valveless flow would be more appropriate.\
+\'a0\'a0\'a0 The biological rational for this study is not coherent and the terminology \'93valveless, tubular hearts\'94 is misleading. The authors briefly described examples of fluid flow in valveless tubular structures of insects and marine creatures. If that is the case, why bring \'93Morphology of the heart\'94? In Line 175-76 they declare \'93We constructed 2-D models of peristalsis in a heart tube\'85.\'94. The biological background should be more focused and emphasized on engineering perspectives.\
+\'a0\'a0\'a0 If the authors concentrate their work on peristaltic flow, why go around with the more general usage of \'93valveless flow\'94?\
+\'a0\'a0\'a0 Womersley number is one of the fluid flow dimensionless numbers, like Reynolds number, and the whole section in the Introduction is redundant.\
+\'a0\'a0\'a0 \'93input values can affect the performance\'85\'94 \'96 do you mean \'93system and/or working parameters\'94?\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Lines 82-84: Can you explain this sentence: \'93Computational modeling of ow produced by valveless, tubular hearts has improved our understanding of biological pumps, since many of the assumptions made in analytical models are not\'a0 required and metrics such as the cost of transport and mixing dynamics can be readily quantified.\'94\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Is ref. 30 a peer-reviewed outlet?\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 \'93teasing apart\'94 \'96 is it a common scientific term?\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Method\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 The computational model is referred to an earlier publication from 2015.\'a0 In order to understand the approach it\'92d be more effective to describe the physical arena (along with an appropriate scheme) and relate it to a biological problem that the authors wish to improve its understanding. Otherwise, the model is an abstractive mathematical/physical problem and detached from what they reviewed and criticized in the Introduction.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 A biomechanical model required assumptions and their rational. Instead the authors provide links to websites where they uploaded their computer codes.\
+\
+\
+\'a0\'a0\'a0 Referee: 3\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 Comments to the Author\
+\'a0\'a0\'a0 This is a nicely written paper. I have only minor comments:\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 (1) Page 2, line 46 (32): You wrote "In embryonic vertebrate hearts, the heart is the first organ to function ..." Comment: This sentence makes no sense. Please rephrase, for example, "In vertebrate embryos, the heart is the first organ to function."\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 (2) Page 10, line 279 (8): You wrote "The length and diameter of the contracting region of the tube, although they vary in animals, were chosen to remain constant for convenience in comparing this analysis to previous study." Comment: This sentence may be confusing to the reader since the diameter of the contracting region will undergo cyclic changes during modeling of peristalsis. Please rephrase.\
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 \
+\'a0\'a0\'a0 \
+\
+\'a0\'a0\'a0 }

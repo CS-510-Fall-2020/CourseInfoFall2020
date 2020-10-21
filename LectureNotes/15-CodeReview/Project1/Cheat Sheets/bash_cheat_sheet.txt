@@ -1,0 +1,20 @@
+ls : list
+ls -l :list of long info 
+ls -a :list with hidden files
+ls -h : list with readable(human) file sizes
+ls *.jpeg :lists everything with .jpeg 
+
+pwd :print working directory
+q :quit
+mkdir :make directory
+cd :change directory
+.. :goes up directory 
+control c : stops command
+man ls/man cd :help function
+rm stuff : remove file
+rm -r stuff : remove directory
+cat stuff :prints file in command line
+less stuff :prints file in seperate page 
+cat mars.txt > blob.txt :copy mars into new file, blob 
+ls -l | grab heart :list all with heart
+cd .. : goes back a directory 
