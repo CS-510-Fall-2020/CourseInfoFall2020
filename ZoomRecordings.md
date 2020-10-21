@@ -38,3 +38,6 @@ https://chapman.zoom.us/rec/share/hwTJVEseiPhvf9SnF3OeLjJ0G4lRhdjquHZuERRJQfcpvL
 
 * 13 - Profiling and Optimization in R \
 https://chapman.zoom.us/rec/share/bJSwvpV_hJGULutAann2dSYMWQ8f6Bppc0Sk2KvWyR85hkpTp8GIN-KGcUKtdM4Z.E2_5clKZ6rZE8Jk_ 
+
+* 14 - Using Memory Efficiently \
+https://chapman.zoom.us/rec/share/1wBwQFUnbBNxL5-F7E04HIuLEpJdfHovgnawykA_yADGK7qWloEIslJDam_IbyKV.lm7n8UNlsi4LjrPd 
