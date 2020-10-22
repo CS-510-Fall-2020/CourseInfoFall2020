@@ -41,3 +41,6 @@ https://chapman.zoom.us/rec/share/bJSwvpV_hJGULutAann2dSYMWQ8f6Bppc0Sk2KvWyR85hk
 
 * 14 - Using Memory Efficiently \
 https://chapman.zoom.us/rec/share/1wBwQFUnbBNxL5-F7E04HIuLEpJdfHovgnawykA_yADGK7qWloEIslJDam_IbyKV.lm7n8UNlsi4LjrPd 
+
+* 15 - Providing Critical Feedback \
+https://chapman.zoom.us/rec/share/muBInjqIT2yOBMxmVWD_VN3oIgyj1hQt9tkoaHub9X-zOcp1BJdlXpTaWBkXnyLH.nqmj2wbZ5-WCAjML 
