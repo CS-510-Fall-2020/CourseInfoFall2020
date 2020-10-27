@@ -44,3 +44,6 @@ https://chapman.zoom.us/rec/share/1wBwQFUnbBNxL5-F7E04HIuLEpJdfHovgnawykA_yADGK7
 
 * 15 - Providing Critical Feedback \
 https://chapman.zoom.us/rec/share/muBInjqIT2yOBMxmVWD_VN3oIgyj1hQt9tkoaHub9X-zOcp1BJdlXpTaWBkXnyLH.nqmj2wbZ5-WCAjML 
+
+* 16 – Documenting Your Work for Reproducibility \
+https://chapman.zoom.us/rec/share/Heeiguw0QAVBtycvXvTr5WQoL8xseVcz6AmGzbJpieuGWOBW6SeAHV-Sle0W5bSJ.R7llsU1lzjSt5mjG 
