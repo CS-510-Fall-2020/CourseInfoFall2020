@@ -26,7 +26,7 @@ package.check <- lapply(
 
 #### Defines required parameters #### 
 nohairs <- 8  # number of hairs in the array
-plotit <- 1  # plot the hairs? yes = 1, no = 0
+plotit <- 0  # plot the hairs? yes = 1, no = 0
 startrun <- 1
 endrun <- 1
 parameter_set <- 165
@@ -66,7 +66,7 @@ circle <- function(center, radius, dx){
 # no = number for label of hair
 # plotit = turns plotting on ==1, turns plotting off ==0
 plotahair <- function(hairxCenterx, hairxCentery, hdia, dx, no, plotit){
-  h1 <- circle(c(hairxCenterx, hairxCentery), 0.5 * hdia, dx)
+  h1 <- circle(c(hairxCenterx, hairxCentery), 0.5 * hdia, "dx")
   if(plotit == 1){
     points(hairxCenterx, hairxCentery, pch = 19, cex = 2.5)
     text(hairxCenterx, hairxCentery, labels = no, col = "red")

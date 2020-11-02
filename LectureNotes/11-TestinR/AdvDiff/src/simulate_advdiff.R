@@ -10,21 +10,21 @@ source("diffuse.R")
 #### Defines parameters ####
 D <- 1e-2        # Diffusion coefficient in m^2/s
 delta.t <- 1e-3  # Time step size in s
-end.time <- 1    # End simulation time in s
+end.time <- 0.01    # End simulation time in s
 start.x <- 5.6
 start.y <- -0.97
 
 # Creates points to follow
-num.dots <- 10000
+num.dots <- 100
 dotsx <- rep(start.x,num.dots)
 dotsy <- rep(start.y,num.dots)
 dots.start <- matrix(c(dotsx,dotsy),num.dots,2)
 
 # Reads in position (x,y) and velocity (Ux,Uy) data
-x <- as.matrix(read.table("data/x.csv", header = FALSE, sep = ","))
-y <- as.matrix(read.table("data/y.csv", header = FALSE, sep = ","))
-Ux <- as.matrix(read.table("data/Ux.csv", header = FALSE, sep = ","))
-Uy <- as.matrix(read.table("data/Uy.csv", header = FALSE, sep = ","))
+x <- as.matrix(read.table("../data/x.csv", header = FALSE, sep = ","))
+y <- as.matrix(read.table("../data/y.csv", header = FALSE, sep = ","))
+Ux <- as.matrix(read.table("../data/Ux.csv", header = FALSE, sep = ","))
+Uy <- as.matrix(read.table("../data/Uy.csv", header = FALSE, sep = ","))
 Ux[is.na(Ux)] <- 0
 Uy[is.na(Uy)] <- 0
 
@@ -44,4 +44,5 @@ dots.end <- dots
 plot(dots.end[, 1], dots.end[, 2], col = "black", pch = 19)
 points(dots.start[, 1], dots.start[, 2], col = "red", pch = 19)
 
-
+write.csv(dots.start,"../results/dot_start_positions.csv")
+write.csv(dots.end,"../results/dot_end_positions.csv")
