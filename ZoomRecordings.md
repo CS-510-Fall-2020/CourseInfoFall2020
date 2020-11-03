@@ -47,3 +47,6 @@ https://chapman.zoom.us/rec/share/muBInjqIT2yOBMxmVWD_VN3oIgyj1hQt9tkoaHub9X-zOc
 
 * 16 – Documenting Your Work for Reproducibility \
 https://chapman.zoom.us/rec/share/Heeiguw0QAVBtycvXvTr5WQoL8xseVcz6AmGzbJpieuGWOBW6SeAHV-Sle0W5bSJ.R7llsU1lzjSt5mjG 
+
+* 17 - Debugging \
+https://chapman.zoom.us/rec/share/7Ny56Q0nb4KJXGRb9ADlSxcISwjXopbNkx_-KvTsIvECFQFBJyAR9sFHydGkSovY.nGpXOM2FM6Xk75si 
