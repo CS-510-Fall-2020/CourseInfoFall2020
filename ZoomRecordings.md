@@ -50,3 +50,6 @@ https://chapman.zoom.us/rec/share/Heeiguw0QAVBtycvXvTr5WQoL8xseVcz6AmGzbJpieuGWO
 
 * 17 - Debugging \
 https://chapman.zoom.us/rec/share/7Ny56Q0nb4KJXGRb9ADlSxcISwjXopbNkx_-KvTsIvECFQFBJyAR9sFHydGkSovY.nGpXOM2FM6Xk75si 
+
+* 18 - Parallel computing in R \
+https://chapman.zoom.us/rec/share/4NisO8V4jlnjRuK-97Eor88Dmr2KCGLiOQNX5N_IhouFF9RB0-yWqcU0qKdvyTPQ.VIkACVViJ7FR_qDs 
