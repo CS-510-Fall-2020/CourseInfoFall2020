@@ -53,3 +53,6 @@ https://chapman.zoom.us/rec/share/7Ny56Q0nb4KJXGRb9ADlSxcISwjXopbNkx_-KvTsIvECFQ
 
 * 18 - Parallel computing in R \
 https://chapman.zoom.us/rec/share/4NisO8V4jlnjRuK-97Eor88Dmr2KCGLiOQNX5N_IhouFF9RB0-yWqcU0qKdvyTPQ.VIkACVViJ7FR_qDs 
+
+* 19 - Data Visualization \
+https://chapman.zoom.us/rec/share/sh06ySB9RMW1z_1IxtoA-P8OD11bNYQn4F8S5cc565J-77lzvKLPvI7KaEyK8oFt.wityGD_lpOG9SPjD 
