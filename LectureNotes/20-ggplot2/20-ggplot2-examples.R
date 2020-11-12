@@ -18,7 +18,7 @@ Loblolly.long<-melt(Loblolly.wide) # Reshape back to long format
 
 # Mapping: Changing aesthetic attributes
 
-ggplot(mtcars, aes(x = mpg, y = hp, color = cyl)) + geom_point()    # Maps correctly 
+ggplot(mtcars, aes(x = mpg, y = hp, color = as.factor(cyl))) + geom_point()    # Maps correctly 
 ggplot(mtcars, aes(x = mpg, y = hp)) + geom_point(color = cyl)      # Maps incorrectly 
 ggplot(mtcars, aes(x = mpg, y = hp)) + geom_point(aes(color = cyl)) # Maps correctly
 
@@ -37,9 +37,9 @@ ggplot(PlantGrowth, aes(x=group,y=weight)) + geom_violin()  # violin plot
 # Scales: changing scales 
 faithfuld <- faithfuld
 p2 <- ggplot(faithfuld, aes(x = eruptions, y = waiting)) + 
-  geom_raster(aes(fill = density), interpolate = TRUE)
+  geom_raster(aes(fill = density), interpolate = T)
 library(viridis) # The Viridis package
-p2 + scale_fill_viridis(option="E") #Options are A-E
+p2 + scale_fill_viridis(option="A") #Options are A-E
 
 library(RColorBrewer) # The R Color Brewer package
 p2 + scale_fill_distiller(palette = "OrRd") 
@@ -48,8 +48,9 @@ p2 + scale_fill_distiller(palette = "OrRd")
 # Guides: changing labels and legends
 
 # Set custom breaks and labels
-p + geom_point(aes(color = cyl)) + 
-  scale_x_continuous(breaks=c(10, 20, 30), labels=c("OK", "Good", "Great!"))
+p + geom_point(aes(color = cyl, size=hp)) + 
+  scale_x_continuous(breaks=c(10, 20, 30), labels=c("OK", "Good", "Great!")) + 
+  scale_y_continuous(breaks=c(100, 200, 300), labels=c("Whimpy", "Meh", "Powerful!"))
 
 # Remove a legend
 p + geom_point(aes(color = cyl)) + guides(color=FALSE)

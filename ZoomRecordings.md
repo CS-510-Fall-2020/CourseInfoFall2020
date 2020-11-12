@@ -56,3 +56,6 @@ https://chapman.zoom.us/rec/share/4NisO8V4jlnjRuK-97Eor88Dmr2KCGLiOQNX5N_IhouFF9
 
 * 19 - Data Visualization \
 https://chapman.zoom.us/rec/share/sh06ySB9RMW1z_1IxtoA-P8OD11bNYQn4F8S5cc565J-77lzvKLPvI7KaEyK8oFt.wityGD_lpOG9SPjD 
+
+* 20 - Grammar of Graphics with ggplot2 \
+https://chapman.zoom.us/rec/share/SbwRfcTZKRCH_RD3bE7MLmeh7c1wTWenPIYyKpO_ICnP68tlFwIluNP5OKDXdLb-.emxsmTCvdYNi0B-g 
