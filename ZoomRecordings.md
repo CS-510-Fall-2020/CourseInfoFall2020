@@ -59,3 +59,6 @@ https://chapman.zoom.us/rec/share/sh06ySB9RMW1z_1IxtoA-P8OD11bNYQn4F8S5cc565J-77
 
 * 20 - Grammar of Graphics with ggplot2 \
 https://chapman.zoom.us/rec/share/SbwRfcTZKRCH_RD3bE7MLmeh7c1wTWenPIYyKpO_ICnP68tlFwIluNP5OKDXdLb-.emxsmTCvdYNi0B-g 
+
+* 21 - Preparing figures for publication \
+https://chapman.zoom.us/rec/share/T1RXSzPDulkmiUxQQQiY9LhxTodomIZj1w7xvOCZkp9Uv0FsE0RDxo5gVhPnqiDc._9QNbynV3e88eX5l 
