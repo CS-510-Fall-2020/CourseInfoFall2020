@@ -62,3 +62,6 @@ https://chapman.zoom.us/rec/share/SbwRfcTZKRCH_RD3bE7MLmeh7c1wTWenPIYyKpO_ICnP68
 
 * 21 - Preparing figures for publication \
 https://chapman.zoom.us/rec/share/T1RXSzPDulkmiUxQQQiY9LhxTodomIZj1w7xvOCZkp9Uv0FsE0RDxo5gVhPnqiDc._9QNbynV3e88eX5l 
+
+* 22 - Discussion: Ethics of Data Visualization \
+https://chapman.zoom.us/rec/share/wfdiyTy1orjINO3oIhe5NlJmHrk4l4LV2q4qgDdirKKZFcCVcpYHRxnJBZ14TI0.kRfEIf4rVzw4xLqh
