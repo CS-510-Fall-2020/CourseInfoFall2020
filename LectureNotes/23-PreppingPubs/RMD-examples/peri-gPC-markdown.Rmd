@@ -1,0 +1,171 @@
+---
+title: "Uncertainty quantification reveals the physical constraints on pumping by peristaltic hearts"
+author: "Lindsay D. Waldrop, Yanyan He, Nicholas A. Battista, Tess Neary Peterman, Laura A. Miller"
+date: "11/30/2020"
+output: pdf_document
+bibliography: BibLaTex.bib
+csl: journal-of-the-royal-society-interface.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+Most biological functional systems are complex, and this complexity is a fundamental driver of diversity. Since input parameters interact in complex ways, a holistic understanding of functional systems is key to understanding how natural selection produces diversity. We present uncertainty quantification (UQ) as a quantitative analysis tool on computational models to study the interplay of complex systems and diversity. We investigate peristaltic pumping in a racetrack circulatory system using a computational model and analyze the impact of three input parameters (Womersley number, compression frequency, compression ratio) on flow and the energetic costs of circulation. We employed two models of peristalsis (one that allows elastic interactions between the heart tube and fluid and one that does not), to investigate the role of elastic interactions on model output. A computationally cheaper surrogate of the input parameter space was created with generalized polynomial chaos expansion to save computational resources. Sobol indices were then calculated based on the gPC expansion and model output. We found that all flow metrics were highly sensitive to changes in compression ratio and insensitive to Womersley number and compression frequency, consistent across models of peristalsis. Elastic interactions changed the patterns of parameter sensitivity for energetic costs between the two models, revealing that elastic interactions are likely a key physical metric of peristalsis. The UQ analysis created two hypotheses regarding diversity: favoring high flow rates (where compression ratio is large and highly conserved) and minimizing energetic costs (which avoids combinations of high compression ratios, high frequencies, and low Womersley numbers).
+
+## Introduction 
+
+### Computational Modeling and Biodiversity
+
+Most biological functional systems are complex. In these systems, variation in morphology and behavior leads to differences in performance at a variety of tasks, influencing individual fitness. Because functional systems are complex, variation in these input parameters do not have linear consequences to functional performance or fitness. Complexity often results in mechanical equivalence, or ``many-to-one mapping," in which different combinations of parameters lead to the same or similar values of performance [@Wainwright:2005, @Anderson:2015]. In these ways, complexity may be a fundamental driver of morphological diversity [@Wainwright:2005, @Wainwright:2007]. 
+
+Therefore, understanding the connection between morphological and kinematic (input parameters) variation and functional performance (output) is key to understanding the evolution and diversity of complex functional systems [@Munoz:2019, @Wainwright:2005, @Polly:2016]. Performance could be highly sensitive to variation in input parameters, meaning small changes in input could lead to disproportionately large changes in performance. On the other hand, performance could be insensitive to variation, leading to little change. Additionally, parameters rarely act independently, so understanding the system as a whole is important.  
+
+Computational modeling provides a solution to this problem. Complexity can be examined with models by decoupling parameters. Modeling can create structures and kinematics not naturally possible to isolate and control in biological systems, giving us a greater ability to test hypotheses of function. They can also explore variation by sampling a greater parameter space than what exists naturally in morphological diversity, providing a way to create full performance landscapes. Models can examine many-to-one mapping, genetic drift, and other synergies through output analysis in ways that traditional experimentation and morphometrics cannot [@Koehl:2003, @Waldrop:entmodel, @Smith:1978, @Dudley:1991]. 
+
+However, many computational models are limited by qualitative analysis techniques [e.g. @Henninger:2010]. The difficulty in analyzing multi-parameter, multi-variable computational models curtails our ability to understand the practical implications of changing one parameter over another since qualitative analyses cannot directly compare the relative contributions of parameters to system performance. Typical analyses involve qualitative measures of performance by changing over only one variable (parameter sweeping), which can neglect effects of many-to-one mapping and synergy between parameters. 
+
+As a step towards connecting modeling and diversity of form, we apply a quantitative sensitivity analysis through uncertainty quantification (UQ) of a computational fluid dynamic (CFD) model of functional performance. UQ can help resolve these issues and broaden the impact of computational modeling on studies of evolution. Quantitative sensitivity analyses can improve our understanding of: 1) the effects of biologically important variation on the system, and 2) the relative importance of parameters that should be closely assessed. In addition, UQ can be used to make conclusions about the variation in existing morphological diversity (based on sensitivity analyses) and validate and improve models when compared to real measurements. 
+
+### Uncertainty Quantification
+
+Uncertainty quantification (UQ) studies the uncertainty in the deterministic modeling process of a physical system, and therefore makes it possible to provide more accurate, precise, and reliable model predictions. UQ accomplishes this by analyzing the effects of known variation of input parameters on the model's output.
+
+Uncertainty in a model's input is normally represented using probability measures and uncertainty quantification frameworks that have been well established based on probability theory. Probability distribution functions (PDFs) represent the uncertainty in input parameters based on measured value ranges. Then the uncertainty in the model output can be quantified using its distribution or statistics instead of relying on a single deterministic value. 
+
+A common way to obtain this mathematical representation of uncertainty output is by using Monte Carlo (MC) method, which draws samples from a distribution of the deterministic model's input parameters, implements the simulations at the drawn samples, and then provides the corresponding samples (consequently the empirical distribution) of the model output. MC method is easy to implement and straightforward to understand. However, it can be computationally expensive since it may require a large number of full simulations to achieve a desired accuracy due to its slow convergence. 
+
+To represent the uncertainty in the output more efficiently than other techniques (i.e. Monte Carlo), one may construct a computationally cheaper surrogate of the input parameter space to approximate the full CFD model output. Generalized polynomial chaos (gPC) expansion method is an efficient way to construct this approximation. The gPC method expands the square integrable random functions in terms of orthogonal polynomials of the random variables. Hermite polynomials are first used to represent Gaussian processes based on the homogeneous chaos theory [@Wiener:1938], then extended to the Askey scheme with different types of orthogonal polynomials for different random functions/processes [@Xiu2002]. By corresponding the PDF of random variables to the weighting function of the orthogonal polynomials from the Askey scheme, the gPC method reaches fast convergence for smooth functions.
+
+
+Compared to Monte Carlo method, the gPC method requires far fewer model simulations to reach the same accuracy, and its efficiency can be orders of magnitude higher [@XiuLucorK2003,  @XiuK2003]. Because of the computational demands of CFD modeling, the gPC method represents a huge improvement in our ability to study these complex systems. Therefore, the gPC method is adopted in our current work.
+
+Based on the gPC expansion, global sensitivity analysis using Sobol indices can be implemented [@Sudret:2008]. Sensitivity analysis studies the impact of different stochastic input variables on the quantity of interest, which helps to understand the important factors in functional performance and possibly reduce the complexity of the physical system [@He:2018]. The Sobol index (SI) is an important sensitivity measure based on analysis of variance (ANOVA) decomposition [@Sobol:1993, @Sobol:2001, @Sudret:2008]. It is defined as the ratio of the variance in the sub-dimensional problem to the total variance of the full-dimensional problem. The higher the SI ratio is, the more important the set of input parameters in that sub-dimensional space is. 
+
+In this study, we begin with a relatively simple model of a complex, biological system as proof of principle: peristaltic pumping in a simple racetrack circulatory system. We use the gPC expansion method to construct a surrogate of the input parameter space of peristaltic pumping and implement sensitivity analysis to determine how input variation in parameters impacts functional performance.
+
+### Driving Circulatory Flow with Peristalsis
+
+Driving fluid with contractions of valveless tubes is widespread in animals and serves a variety of purposes, including pumping lymph and other fluids [@Griffiths:1987, @Gashev:2002, @Lee:2009, @Glenn:2010], driving fluid exchange in respiratory systems [@Miller:1981, @Greenlee:2013, @Harrison:2013, @Woods:2017], and driving circulatory systems [@Xavier-Neto:2007, @Xavier-Neto:2010]. Within the Chordata, valveless, tubular pumps (hearts) drive blood flow within circulatory systems in tunicates, cephalochordates, and embryonic vertebrates [@Xavier-Neto:2010, @Davidson:2007]. In vertebrate embryos, a valveless, tubular heart is the first organ to function and the flow it generates impacts the development of all other organs [@Jones:2004]. 
+
+Broadly, peristaltic pumps are classified as valveless, tubular pumps. Valveless, tubular pumps in animals are hollow, muscular tubes that produce flow through contractions of the walls. Such contractions reduce the diameter of the tube that drives fluid inside the lumen of the tube. Valveless, tubular pumps can be driven by peristalsis (rhythmic contractions of muscles within the walls of the tube that are propagated down the length of the tube) or Liebau pumping (where contractions at certain points on the tube travel in passive waves dictated by the material properties of the tube itself) [@Manner:2010, @Waldrop:peristalsis]. The direction of the flow inside the tube is controlled only by aspects of the pumping kinematics (e.g. the direction of the contracting wave), not by any physical means (e.g. one-way valves).
+
+There is some debate as to whether the pumping mechanisms of tubular, valveless hearts in animals best fits with the definition of peristalsis or Liebau pumping (for recent discussions, see [@Manner:2010, @Battista:2017]). Recent work has suggested that peristalsis or some peristalsis-like mechanism bests fits the available data and theoretical understanding of each mechanism [@Waldrop:peristalsis, @Baird:2014, @Baird:2015, @Kozlovsky:2016]. Here, we simplify the situation by focusing exclusively on peristaltic pumping by tubular hearts. 
+
+Despite their simple outward appearance, pumping by peristaltic hearts is a complicated functional system. This mechanical system has a variety of parameters, including:
+
+ - *Morphology of the heart.* Parameters associated with morphology which possibly influence flow include the tube's relative resting diameter and length [@Waldrop:peristalsis], the mechanical properties of the myocardium and surrounding structures [@Waldrop:pericardium, @Lee:2012, @Baird:2014], and the resistivity of the circulatory system. These morphological features show variation among animals within the Chordata [@Xavier-Neto:2007, @Xavier-Neto:2010], but the role of such features in functional performance is not well understood. 
+ - *Kinematics of tube compression.* The frequency of compressions can have a complicated, non-linear relationship with flow speeds [@Forouhar:2006, @Waldrop:peristalsis]. Compression ratio, the percent occlusion of the tube, can affect flow speeds in non-linear ways [@Waldrop:peristalsis, @Waldrop:pericardium]. Feedback between the action potentials and mechanical properties of the myocardium also impact flow features [@Baird:2014, @Baird:2015, @Waldrop:pericardium].
+ - *Size and scaling.* Fluid flow undergoes a critical transition between small sizes and speeds, where the viscosity of fluid damps out unsteady effects, to large sizes and speeds, where inertia is relatively more influential to the character of fluid flow than viscosity and unsteady effects are important. For pulsatile flow, a ratio between inertial and viscous forces is called the Womersley number ($Wo$) and helps to define the transition (at $Wo\approx1$):
+\begin{equation}
+Wo = d\sqrt{\frac{f \rho}{\mu}},
+\label{Wo}
+\end{equation}
+where $f$ is the frequency of the pulse, $d$ is the resting diameter of the tube, $\mu$ is fluid dynamic viscosity, and $\rho$ is fluid density. Embryonic vertebrates possess circulatory systems that grow through this transitional range with tubular hearts that transform into chambered hearts with valves during development. Other groups of animals explore size through evolutionary time, retaining a tubular heart throughout their lives. 
+
+
+Performance of hearts can be assessed in several ways. Volume flow rate may be an important performance output, as flow produced by the heart transports key nutrients and waste [@Heron:1975]. However, this fluid transport comes at a cost, as work must be done by the myocardium to force viscous fluid through a resistive circulatory system. It is likely that performance trade-offs exist in this system, and these trade offs are inevitably mediated by variation in input parameters. 
+
+Analytical models and approximations of peristalsis have been used to describe many aspects of peristaltic transport, including the average flow as a function of the wave speed and contraction amplitude [@Pozrikidis:87, @Jaffrin:71, @Fung:68, @Shapiro:69]. These models typically assume contraction amplitudes are small, inertia is negligible, there is no flow in the radial direction, and/or any effects of elastic storage are negligible. Furthermore, metrics such as the cost of transport and the amount of mixing are not readily obtainable. Few, if any, studies have examined this flow in the context of resistive circulatory systems, a key evolutionary development in vertebrate circulation.
+
+Computational modeling of flow produced by valveless, tubular hearts has improved our understanding of biological pumps, since many of the assumptions made in analytical models are not required and metrics such as the cost of transport and mixing dynamics can be readily quantified. These models have also helped clarify the mechanism of pumping of hearts such as those of vertebrate embryos [@Waldrop:peristalsis, @Baird:2014, @Baird:2015, @Kozlovsky:2016, @Battista:2017], as well as our understanding of other important developmental morphological changes including the development of cardiac cushions, the presence of trabeculae, and the presence of blood cells [@Taber:2001, @Taber:2007, @Battista:2017, @Battista:2018]. 
+
+### Study Objectives
+
+In the current work, we implement UQ techniques to explore peristalsis in a circulatory system using the immerse boundary method, a computational fluid dynamics (CFD) model. We present two mechanisms of peristalsis in this work: peristalsis driven by opposing sine waves and peristalsis driven by opposing sharp, Gaussian peaks. Our aims are to (1) demonstrate the effectiveness of the UQ method for assessing the impact of input variation on a functional system modeled computationally; (2) assess the impacts of elastic interactions using two models of peristalsis; and (3) use the results and sensitivity analyses to make prediction of morphology and kinematic combinations that make especially effective pumps.
+
+We constructed two-dimensional models of peristalsis in a heart tube which drive flow through a closed racetrack circulatory system. We then constructed a surrogate to replace the full input space of the CFD model using gPC expansion. Using sensitivity analysis, we explore the interactive effects on performance outputs (flow in the system, work, and cost of transport) of morphology, kinematics, and size through three input parameters: the dimensionless Womersley number $Wo$  (eq. \ref{Wo}), compression ratio of the tube $CR$, and compression frequency $f$ with constant wave speed. Based on these results, we make conclusions about the diversity of these parameters in extant groups of animals with peristaltically driven circulatory flow.
+
+## Materials and Methods
+
+
+### Computational Model of Peristalsis
+
+#### Immersed Boundary Method
+
+The models of peristalsis (presented in [\cite{]@Waldrop:peristalsis]) were implemented using the immersed boundary method (IBM) and with the C++ library Immersed Boundary with Adaptive Mesh Refinement (IBAMR) [@Griffith:2014]. IBM allows a direct, numerical simulation of the Navier-Stokes equations of fluid flow interacting with flexible boundaries moving either freely or with preferred motion. IBAMR incorporates adaptive mesh refinement, which allows the Eulerian grid on which the Navier-Stokes equations are solved to be rougher away from the boundaries and finer close to boundaries to save computational resources. Additional details of the IBM are located in the supplemental information to this paper. 
+
+```{r grid-fig, echo=FALSE, fig.cap="Racetrack model showing adaptive meshing. Full racetrack showing the $R_{top}$ and $R_{bot}$ used to generate prescribed motion in red and adaptive meshing of domain: roughest mesh (32 x 32 grid) in dark blue, intermediate mesh (16 x 16 grid) in teal, and finest mesh (8 x 8 grid) in gold, black box highlights inset a. Inset a: close up of region including part of the tube and racetrack showing meshes, black box highlights inset b. Inset b: close up of tube showing relation of finest mesh and target points of the racetrack. ", out.width = '100%'}
+knitr::include_graphics("figures/Figure1.png")
+```
+
+
+The circulatory model consisted of a racetrack that was effectively made rigid through the use of tether points with an inner lumen, two straight sections connected by two curved regions, and a moving region at the bottom of the racetrack, representing the heart tube that moved with a preferred motion. The racetrack design was used to stay consistent with past designs for easier comparison to other analyses [@Jung:2000, @Lee:2012, @Baird:2014, @Waldrop:peristalsis]. 
+
+
+The elastic region had a 4:1 length:diameter ratio  with the inner 3/4 of the tube length consisting of points tethered to target points, which drove the preferred peristaltic motion (Fig. \ref{fig:grid-fig}). The rest of the racetrack were tethered to target points which remained still throughout the simulations. Target point stiffness ($k_{targ}$) was chosen as 30.0 to remain consistent with the model in [@Waldrop:peristalsis].
+
+The force equation used to drive peristalsis in the model is: 
+\begin{equation}
+\mathbf{f}(r,t) = k_{targ}(\mathbf{Y}(r,t) - \mathbf{X}(r,t))
+\label{eq:f}
+\end{equation}
+where $\mathbf{Y}(r,t)$ is the preferred position of the boundary. Only the preferred motion of the boundary in each model of peristalsis differed. Each model of driving peristalsis is described below. 
+
+#### Opposing sine-wave peristalsis model
+
+The sine-wave model defines the motion of the boundary as two opposing sine waves:
+\begin{equation}
+y_{top,bot} = R_{top,bot} \pm A \sin(2\pi f t+ 2\pi cx_t)
+\label{eq:sinewaves}
+\end{equation} 
+where $f$ is the compression frequency, $c$ is the compression-wave speed (held constant throughout the study at a non-dimensional speed of 3.0), $A$ is the amplitude of the contraction, and $x_t$ is the horizontal distance from the beginning of the prescribed motion section. The compression ratio gives the percent occlusion and is equal to $2A$. The peristaltic waves created by Eq.~\ref{eq:sinewaves} propagated from left to right, therefore driving fluid flow counter-clockwise in the lumen of the racetrack. The stiffness of the boundary and target point stiffness ($k_{targ}=30.0$) allowed for very little independent elastic motion in the peristaltic region of the tube.
+
+For additional details on the opposing sine-wave peristalsis model, see [@Waldrop:peristalsis]. 
+
+#### Opposing Gaussian-peak peristalsis model
+
+The pinch model defines the motion of the boundary as two sharp, Gaussian peaks, with the remainder of the boundary being free to flex with little restriction by the target points: 
+\begin{equation}
+y_{top,bot} = R_{top,bot} \pm A\exp((-0.5(x_t-\gamma)/\sigma)^2)
+\label{eq:gaussianwaves}
+\end{equation}
+Where $\gamma$ is the position of the pinch on the x-axis of the center of the tube and $\sigma$ is the width of the pinch. The pinch was advanced by altering $\gamma$ depending on the time step of the simulation. For the points within the region of the Gaussian wave, the target point stiffness was chosen to be extremely stiff ($k_{targ}=2500$) so that the target points adhered closely to the programmed waveform. Outside the peak region, the target points were tethered very loosely ($k_{targ}=0.7$) with a spring constant about two orders of magnitude stiffer to allow for elastic interactions between fluid and the heart tube.
+
+
+### Analysis of Flow and Pressure Fields
+
+Several calculations of non-dimensional fluid flow and pressure were made for each simulation in VisIt 2.9.1 [@HPV:VisIt] and *R* [@R:2011], similar to the analyses in [@Waldrop:peristalsis]. Positive flow speeds indicate fluid motion in the counter-clockwise direction in the racetrack, the same direction as the traveling peristaltic wave. All values presented in the analysis are dimensionless, and more information about nondimensionalizing values can be found in the supplemental information to this paper. 
+
+At each time step in the simulation, the magnitude of dimensionless fluid velocity was recorded and then spatially averaged across each area to find $|\mathbf{u'}|$ across four rigid sections of the racetrack: the upper position, a connecting vertical position, the inflow region (vena cava) and outflow region (aorta). The mean speeds $|\mathbf{u'}|$ were then temporally averaged to find the average flow speed across each simulation ($U_{avg}$). The maximum value of flow speed, $\mathbf{u'_{m}}$, was also taken at each time step, and the maximum of these in a simulation represents the peak flow speed ($U_{peak}$). 
+
+Non-dimensional pressure was also recorded for each time step of the simulation and spatially averaged at each time step near the inflow area (vena cava position) and the outflow area (aorta position) of the elastic region. For each simulation, the vena cava and aorta positions' pressures were averaged temporally to find $p_{in}$ and $p_{out}$, respectively. Each inflow pressure was subtracted from the outflow pressure at each time step to find their difference, and these differences were averaged over simulation time to find $\Delta P$. 
+
+Volume flow rate was calculated using the velocity profile across the upper position of the racetrack for each simulation. At each time step during a simulation, the velocities were sampled across the diameter of the tube to create a velocity profile across the tube. Each value was then used to calculate the volume of a concentric ring of fluid that passed through the tube during the time step based on the velocity at that position in the tube. These rings were then summed to find the volume flow rate at that time step, then these volume flow rates were averaged temporally to find the average volume flow rate of the simulation, $Q$. 
+
+## Results
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE} 
+# Loads required packages
+library(ggplot2)
+library(reshape2)
+require(RColorBrewer)
+library(grid)
+library(gridExtra)
+library(knitr)
+# Create Data frame with all data pulled from matlab figures for sine wave
+data<-read.csv("data/sobol_indices_2019-02-04.csv",header=TRUE)
+cbPalette1p <- c("#999999", "#c9c9c9","#E69F00", "#eec770","#56B4E9","#a7cfe5", "#009E73","#55c3a5","#CC79A7","#e2b1cc","#9345D5","#B689DC","#C70039","#CF7070")
+
+Qdata<-data[data$var=="Q",]
+Qmelted<-melt(Qdata,measure.vars=c("sobol_sine","sobol_pinch"))
+Qdata$parameters<-factor(Qdata$parameters,levels=Qdata$parameters)
+```
+
+
+```{r results-fig, echo=FALSE, fig.cap="Sobol indices for volume flow rate.", fig.width=6, fig.height=3}
+ggplot(Qmelted,aes(parameters,value,fill=variable)) +
+  geom_bar(stat="identity",position="dodge")+
+  scale_y_continuous("Sobol indices")+
+  scale_x_discrete("")+scale_fill_manual(values=c(cbPalette1p[5],cbPalette1p[6]))+
+  theme_bw(base_size = 16) +
+  theme(axis.text.x=element_text(angle=45,hjust=1),
+        legend.direction="vertical",legend.position=c("right"))
+```
+
+
+
+## References 
+
