@@ -2,7 +2,6 @@
 advect<-function(dots,x,y,Ux,Uy,delta.t){
   idx<-find.spot(dots[,1],x)
   idy<-find.spot(dots[,2],y)
-  delta.t <- "a"
   dots[,1]<-dots[,1]+Ux[idx]*delta.t
   dots[,2]<-dots[,2]+Uy[idy]*delta.t
   return(dots)

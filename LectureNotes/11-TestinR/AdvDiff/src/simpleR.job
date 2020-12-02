@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+#SBATCH --output=simple.out
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --ntasks=1
+
+cd /home/waldrop@chapman.edu/AdvDiff
+
+module load R
+
+Rscript "src/simulate_advdiff.R"
+

@@ -1,8 +1,14 @@
 ---
-title: "Uncertainty quantification reveals the physical constraints on pumping by peristaltic hearts"
-author: "Lindsay D. Waldrop, Yanyan He, Nicholas A. Battista, Tess Neary Peterman, Laura A. Miller"
+title: Uncertainty quantification reveals the physical constraints on pumping by peristaltic
+  hearts
+author: Lindsay D. Waldrop, Yanyan He, Nicholas A. Battista, Tess Neary Peterman,
+  Laura A. Miller
 date: "11/30/2020"
-output: pdf_document
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
 bibliography: BibLaTex.bib
 csl: journal-of-the-royal-society-interface.csl
 ---
@@ -85,7 +91,7 @@ We constructed two-dimensional models of peristalsis in a heart tube which drive
 
 #### Immersed Boundary Method
 
-The models of peristalsis (presented in [\cite{]@Waldrop:peristalsis]) were implemented using the immersed boundary method (IBM) and with the C++ library Immersed Boundary with Adaptive Mesh Refinement (IBAMR) [@Griffith:2014]. IBM allows a direct, numerical simulation of the Navier-Stokes equations of fluid flow interacting with flexible boundaries moving either freely or with preferred motion. IBAMR incorporates adaptive mesh refinement, which allows the Eulerian grid on which the Navier-Stokes equations are solved to be rougher away from the boundaries and finer close to boundaries to save computational resources. Additional details of the IBM are located in the supplemental information to this paper. 
+The models of peristalsis (presented in [@Waldrop:peristalsis]) were implemented using the immersed boundary method (IBM) and with the C++ library Immersed Boundary with Adaptive Mesh Refinement (IBAMR) [@Griffith:2014]. IBM allows a direct, numerical simulation of the Navier-Stokes equations of fluid flow interacting with flexible boundaries moving either freely or with preferred motion. IBAMR incorporates adaptive mesh refinement, which allows the Eulerian grid on which the Navier-Stokes equations are solved to be rougher away from the boundaries and finer close to boundaries to save computational resources. Additional details of the IBM are located in the supplemental information to this paper. 
 
 ```{r grid-fig, echo=FALSE, fig.cap="Racetrack model showing adaptive meshing. Full racetrack showing the $R_{top}$ and $R_{bot}$ used to generate prescribed motion in red and adaptive meshing of domain: roughest mesh (32 x 32 grid) in dark blue, intermediate mesh (16 x 16 grid) in teal, and finest mesh (8 x 8 grid) in gold, black box highlights inset a. Inset a: close up of region including part of the tube and racetrack showing meshes, black box highlights inset b. Inset b: close up of tube showing relation of finest mesh and target points of the racetrack. ", out.width = '100%'}
 knitr::include_graphics("figures/Figure1.png")
