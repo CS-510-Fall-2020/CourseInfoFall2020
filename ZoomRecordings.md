@@ -68,3 +68,6 @@ https://chapman.zoom.us/rec/share/wfdiyTy1orjINO3oIhe5NlJmHrk4l4LV2q4qgDdirKKZFc
 
 * 23 - Preparing scientific publications \
 https://chapman.zoom.us/rec/share/QSj7dRY1zz8XHz9RV0Y6aiN8VtJHLbBTaOzOhz5RXHcxE1Z18aBZbUPmdNsfnZGh.PI-mXvdeCqge43_A 
+
+* 24 - Interacting with HPC Resources \
+https://chapman.zoom.us/rec/share/NvcWDjCQLmfUdTe9P1j9dQ5xZQWn6oxvBqd9Bi04ZmBZ7aHalfz4xvwefqgGzHVO.Kfi4a-qg8M1vJwd7
